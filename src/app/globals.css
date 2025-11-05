@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "@fontsource/poppins/index.css";
+
+:root {
+  --background: #ffe8f0;
+  --foreground: #1a0a12;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Force pink theme always - no dark mode */
+html {
+  background: #ffe8f0 !important;
+  color: #1a0a12 !important;
+}
+
+body {
+  background: #ffe8f0 !important;
+  color: #1a0a12 !important;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar - Pink Theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffd6ec;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #e64c98, #ff85c0, #ff69b4);
+  border-radius: 10px;
+  border: 2px solid #ffd6ec;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c73880, #e64c98, #ff85c0);
+}
+
+/* Smooth animations */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #e64c98;
+}
+
+/* Selection color - Pink Theme */
+::selection {
+  background-color: #ff69b4;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #ff69b4;
+  color: white;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
